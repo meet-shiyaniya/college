@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+@layer base{
+    html{
+        scroll-behavior: smooth;
+    }
+    li{
+        @apply list-none
+    }
+}
+
+@layer components{
+    .max-container{
+        max-width: 1400px;
+        margin: 0 auto;
+        @apply px-2 max-lg:px-5
+    }
+}
+
+@layer utilities{
+    .padding-y{
+        @apply lg:py-12 py-8
+    }
+    .nav-links{
+        @apply font-roboto text-lg max-md:text-base tracking-wide  hover:text-blue-400 transition
+    }
+    /* .nav{
+        @apply flex items-center justify-center text-black space-x-6 max-md:flex-col max-md:w-full max-md:absolute max-md:top-[100px] z-10 max-md:space-y-5 max-md:bg-blue-200 max-md:text-slate-200 max-md:p-4 max-md:text-center;
+    }
+    .active{
+        @apply top-0 hidden;
+    } */
+    .nav{
+        @apply flex items-center justify-center text-black space-x-6 max-md:flex-col max-md:w-full max-md:absolute max-md:top-[-400px] z-10 max-md:space-y-3 max-md:bg-blue-100 max-md:text-slate-200 max-md:p-3 max-md:pl-[30%] max-md:items-start transition-all duration-300;
+    }
+    .trusted-company{
+        @apply md:text-5xl text-2xl rounded-full text-slate-700
+    }
+    .footer-heading{
+        @apply text-white font-roboto font-semibold text-lg tracking-wide 
+    }
+    .footer-description{
+        @apply text-slate-300 font-medium text-sm tracking-wide mt-2
+    }
+    .cart-heading{
+        @apply font-roboto font-medium tracking-wide text-lg max-md:text-sm text-blue-600
+    }
+}
